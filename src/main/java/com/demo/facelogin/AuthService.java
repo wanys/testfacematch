@@ -1,5 +1,7 @@
 package com.demo.facelogin;
 
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -24,7 +26,7 @@ public class AuthService {
         // 官网获取的 API Key 更新为你注册的
         String clientId = "AFkQnlwb68X96ipZgekayouu";
         // 官网获取的 Secret Key 更新为你注册的
-        String clientSecret = "aIxactP4LzLbf4Ig7GGDS25VMr8Drllv ";
+        String clientSecret = "aIxactP4LzLbf4Ig7GGDS25VMr8Drllv";
         return getAuth(clientId, clientSecret);
     }
 

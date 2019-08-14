@@ -27,7 +27,7 @@ public class Facematch {
         // 请求url
         String url = "https://aip.baidubce.com/rest/2.0/face/v3/detect";
         try {
-            byte[] bytes1 = FileUtil.readFileByBytes("E:/1.jpg");
+            byte[] bytes1 = FileUtil.readFileByBytes("E:/2.jpg");
             String image1= Base64Util.encode(bytes1);
 
             List<Map<String, Object>> images = new ArrayList<>();

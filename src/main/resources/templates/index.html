@@ -36,6 +36,7 @@
             <!-- <div class="line"></div> -->
             <video id="myVideo" src="" class="video" ></video>
         </div>
+        <form id="form"></form>
         <canvas id="myCanvas" width="600" height="400" hidden="hidden"></canvas>
         <script>
             var myVideo = document.getElementById('myVideo');
@@ -60,19 +61,22 @@
                     data:{
                         message:imgSrc
                     },
-                    success:function(score){
-                        var scoreMatch = score.split(".")[0];
-                        if(scoreMatch>80){
-                            window.location="success"
+                    success:function(result){
+                     /*   alert("前面"+result+"前面");*/
+                        var scoreMatch = result.split(".")[0];
+                        if(result>80){
+                            alert("匹配成功")
+                            $("#form").attr("action", "/test").submit();
+                         /*   window.location="success.html"*/
                         }
                         else{
-
+                            alert("失败"+scoreMatch+"失败")
                             return;
                         }
                     }
                 })
             }
-            setInterval("jiance()","1100");  //每隔一秒执行一次函数截图
+            setInterval("jiance()","3100");  //每隔3秒执行一次函数截图
 
 
             //将图片Base64 转成文件
@@ -81,5 +85,6 @@
         <div id="iframe">
         </div>
     </div>
+</div>
 </body>
 </html>
